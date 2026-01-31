@@ -35,6 +35,8 @@ def main():
         max_retries=2,
     )
 
+    # llm = ChatOllama(temperature=0, model="gemma3:12b")
+
     chain = summary_prompt_template | llm
     response = chain.invoke(input={"information": information})
     print(response.content)
