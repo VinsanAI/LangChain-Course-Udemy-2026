@@ -19,6 +19,7 @@ llm = ChatGoogleGenerativeAI(
         max_retries=2,
     )
 
+# ChatOllama doesn't support agent with response_format parameter, instead create a prebuilt react agent.
 # llm = ChatOllama(temperature=0, model="gpt-oss:20b")
 
 class Source(BaseModel):
